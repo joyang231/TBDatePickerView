@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,13 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr8-eB-S0b">
-                                <rect key="frame" x="141" y="318" width="92" height="30"/>
+                                <rect key="frame" x="136.5" y="318.5" width="101" height="29"/>
                                 <color key="backgroundColor" red="0.0" green="0.77647058820000003" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="点击选择时间">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="  点击选择时间  ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadiuss" value="4"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -36,18 +38,36 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间在这里显示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwY-sj-TNF">
-                                <rect key="frame" x="126.5" y="237" width="121.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="130" y="239" width="114.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示：日期格式填写@&quot;2000-01-01&quot;,默认的起始日期是2000-01-01，默认的截止日期是当前日期。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSj-n9-5cv">
+                                <rect key="frame" x="36" y="397.5" width="303" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TBDatePickerViewDemo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyY-Xj-Vad">
+                                <rect key="frame" x="68.5" y="60" width="239.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qSj-n9-5cv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zr-NR-Qc9"/>
                             <constraint firstItem="Mr8-eB-S0b" firstAttribute="top" secondItem="nwY-sj-TNF" secondAttribute="bottom" constant="60" id="7j0-SY-Xt7"/>
                             <constraint firstItem="Mr8-eB-S0b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BaS-iE-1iz"/>
                             <constraint firstItem="nwY-sj-TNF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DqP-uP-Thy"/>
                             <constraint firstItem="Mr8-eB-S0b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L0i-ne-5qE"/>
+                            <constraint firstItem="eyY-Xj-Vad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pb9-yc-sxd"/>
+                            <constraint firstItem="eyY-Xj-Vad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="QGf-N4-aes"/>
+                            <constraint firstItem="qSj-n9-5cv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="p36-Xl-ipT"/>
+                            <constraint firstItem="qSj-n9-5cv" firstAttribute="top" secondItem="Mr8-eB-S0b" secondAttribute="bottom" constant="50" id="wda-JA-3lx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qSj-n9-5cv" secondAttribute="trailing" constant="20" id="wlh-XE-rYd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -56,6 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
