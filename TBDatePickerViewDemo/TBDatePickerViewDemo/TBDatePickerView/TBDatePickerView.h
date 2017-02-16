@@ -10,7 +10,6 @@
 
 @interface TBDatePickerView : UIView
 
-
 @property (nonatomic,copy)void(^callBack)(NSInteger year,NSInteger month,NSInteger day);
 
 
